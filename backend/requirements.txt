@@ -23,3 +23,7 @@ python-dotenv
 
 # Async tools and utilities
 anyio
+
+
+python-multipart
+
