@@ -1,0 +1,25 @@
+# Core server framework
+fastapi
+uvicorn[standard]
+
+# Agent orchestration
+langgraph
+crewai
+mistralai
+
+# Image handling (for imagery triage)
+pillow
+
+# Data handling
+pydantic
+numpy
+
+# HTTP calls (for Coral or other APIs)
+httpx
+requests
+
+# Environment variables
+python-dotenv
+
+# Async tools and utilities
+anyio
