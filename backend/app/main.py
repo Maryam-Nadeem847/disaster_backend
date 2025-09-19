@@ -14,9 +14,24 @@ from .agents.social_agent import dummy_social_triage
 from .agents.logistics_agent import simple_logistics_optimizer
 from .coral_integration import register_responder_agent
 import base64
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 app = FastAPI(title="Disaster Response Orchestrator (MVP)")
+app.add_middleware(
 
+    CORSMiddleware,
+
+    allow_origins=["*"],  
+
+    allow_credentials=True,
+
+    allow_methods=["*"],
+
+    allow_headers=["*"],
+
+)
 # Initialize orchestrator
 ORCH = Orchestrator(langgraph_api_key=os.getenv("LANGGRAPH_API_KEY"))
 
